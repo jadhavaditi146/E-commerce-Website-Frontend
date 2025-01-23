@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-commerce Homepage</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <style>
+    @media (max-width: 768px) {
+      .mobile-menu { display: none; }
+    }
+
+    /* Ensuring images are contained and properly spaced */
+    .banner-image {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      border-radius: 0.5rem;
+    }
+  </style>
+</head>
+<body class="bg-orange-200">
+  <nav class="bg-red-500 text-white shadow-lg">
+    <div class="container mx-auto px-4 flex items-center justify-between py-4">
+      <a href="#" class="text-2xl font-bold">ShopEasy</a>
+
+      <div class="flex items-center w-full md:w-1/2 bg-white rounded-lg px-2 py-1 shadow-sm">
+        <i data-feather="camera" class="text-gray-600 h-9 w-8 mr-2"></i>
+        <input 
+          type="text" 
+          placeholder="Search for products, brands, and more" 
+          class="w-full px-2 py-2 focus:outline-none text-gray-800 text-sm">
+        <i data-feather="mic" class="text-gray-600 h-9 w-8 ml-2"></i>
+        <button class="bg-red-500 text-white px-4 py-1 rounded-lg ml-2">Search</button>
+      </div>
+
+      <div class="hidden md:flex space-x-6">
+        <a href="#" class="hover:underline"><i data-feather="log-in" class="w-5 h-5 inline mr-1"></i>Login</a>
+        <a href="#" class="hover:underline"><i data-feather="more-horizontal" class="w-5 h-5 inline mr-1"></i>More</a>
+        <a href="#" class="hover:underline"><i data-feather="shopping-cart" class="w-5 h-5 inline mr-1"></i>Cart</a>
+      </div>
+
+      <button class="md:hidden focus:outline-none" id="menu-toggle">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="mobile-menu bg-red-500 md:hidden" id="mobile-menu">
+      <a href="#" class="block px-4 py-2 hover:bg-red-600"><i data-feather="log-in" class="w-5 h-5 inline mr-1"></i>Login</a>
+      <a href="#" class="block px-4 py-2 hover:bg-red-600"><i data-feather="more-horizontal" class="w-5 h-5 inline mr-1"></i>More</a>
+      <a href="#" class="block px-4 py-2 hover:bg-red-600"><i data-feather="shopping-cart" class="w-5 h-5 inline mr-1"></i>Cart</a>
+    </div>
+  </nav>
+
+  <section class="bg-orange-200">
+    <div class="container mx-auto">
+      <div class="mt-6">
+        <div class="relative bg-gray-300 rounded-lg w-full max-w-[1280px] mx-auto h-[calc(100vh-80px)] flex items-center justify-center shadow-md">
+          <img src="https://img.freepik.com/premium-psd/banner-template-online-fashion-sale_23-2148585403.jpg" alt="Main Banner" class="banner-image">
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
+        <div class="bg-gray-300 h-32 rounded-lg flex items-center justify-center">
+          <img src="https://cdn.dribbble.com/users/3806580/screenshots/14396176/dribble_4x.jpg" alt="Small Banner 1" class="banner-image">
+        </div>
+        <div class="bg-gray-300 h-32 rounded-lg flex items-center justify-center">
+          <img src="https://i.ytimg.com/vi/f64GdOxJjPE/maxresdefault.jpg" alt="Small Banner 2" class="banner-image">
+        </div>
+        <div class="bg-gray-300 h-32 rounded-lg flex items-center justify-center">
+          <img src="https://i.ytimg.com/vi/VjVp8uvrUyE/maxresdefault.jpg" alt="Small Banner 3" class="banner-image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-orange-200 py-6">
+    <div class="container mx-auto">
+      <h2 class="text-xl font-bold mb-4">Shop by Categories</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+        <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-lg">
+          <img src="https://www.seekpng.com/png/full/774-7744281_samsung-electronics-samsung-electronic-product-png.png" alt="Category" class="mx-auto">
+          <p class="text-center mt-2">Electronics</p>
+        </div>
+        <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-lg">
+          <img src="https://stylecaster.com/wp-content/uploads/2016/02/editors-picks-feature-41.png" alt="Category" class="mx-auto">
+          <p class="text-center mt-2">Fashion</p>
+        </div>
+        <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-lg">
+          <img src="https://tse3.mm.bing.net/th?id=OIP.gj_xOfZ3J2ex82FKKEhXAwHaE8&pid=Api&P=0&h=180" alt="Category" class="mx-auto">
+          <p class="text-center mt-2">Home Appliances</p>
+        </div>
+        <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-lg">
+          <img src="https://tse4.mm.bing.net/th?id=OIP.Uq2cUUeYgx3XgjdXyAjLXAHaG2&pid=Api&P=0&h=180" alt="Category" class="mx-auto">
+          <p class="text-center mt-2">Mobiles</p>
+        </div>
+        <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-lg">
+          <img src="https://images.news18.com/ibnlive/uploads/2021/10/makeup-kit.jpg" alt="Category" class="mx-auto">
+          <p class="text-center mt-2">Beauty</p>
+        </div>
+        <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-lg">
+          <img src="https://www.pngarts.com/files/9/Athletic-Sports-Equipment-PNG-Download-Image-417x279.png" alt="Category" class="mx-auto">
+          <p class="text-center mt-2">Sports</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-6">
+    <div class="container mx-auto">
+      <h2 class="text-xl text-black font-bold mb-4">Featured Products</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+        <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg">
+          <img src="https://i5.walmartimages.com/asr/01f45e55-1e7d-4b2c-9983-abd6499b8e68_1.42b65de79c231959bc7711ac356b69fb.jpeg?odnWidth=1000&odnHeight=1000&odnBg=ffffff" alt="Product" class="mx-auto">
+          <p class="text-center mt-2 font-bold">Airpods</p>
+          <p class="text-center text-black font-bold">₹1000</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg">
+          <img src="https://ae01.alicdn.com/kf/HTB1dDncMVXXXXcHaXXXq6xXFXXXs/XTEP-Brand-Profession-Running-Shoes-2016-Autumn-Winter-Men-s-Sports-Shoes-Damping-Cushioning-Athletic-Sneakers.jpg" alt="Product" class="mx-auto">
+          <p class="text-center mt-2 font-bold">Shoes</p>
+          <p class="text-center text-black font-bold">₹1200</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg">
+          <img src="https://m.media-amazon.com/images/I/91ytZfA1F6L.jpg" alt="Product" class="mx-auto">
+          <p class="text-center mt-2 font-bold">Board Chess</p>
+          <p class="text-center text-black font-bold">₹900</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg">
+          <img src="https://cf.shopee.ph/file/2dca2f985a712583238fffa1ffd8d9cf" alt="Product" class="mx-auto">
+          <p class="text-center mt-2 font-bold">Washing Machine</p>
+          <p class="text-center text-black font-bold">₹20000</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg">
+            <img src="https://images.squarespace-cdn.com/content/v1/5e88044f6a6ffa7b2fe78f54/1610340555017-NPQGKKXKGBPR3MMC6PBP/Harry+Potter+book+set-+Harry+Potter+Complete+Collection+Special+Collectors+set.jpg" alt="Product" class="mx-auto">
+            <p class="text-center mt-2 font-bold">Harry Potter all in one collection</p>
+            <p class="text-center text-black font-bold">₹110</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-red-500 text-white py-6">
+    <div class="container mx-auto text-center">
+      <p class="text-sm">©ShopEasy. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    feather.replace();
+
+    // Mobile menu toggle
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+      const menu = document.getElementById('mobile-menu');
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    });
+  </script>
+</body>
+</html>
